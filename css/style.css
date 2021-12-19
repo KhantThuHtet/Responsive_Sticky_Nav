@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #343a40;
+  color: rgb(214, 214, 214);
+  font-family: "Roboto Condensed", sans-serif;
+}
+.header {
+  padding: 100px;
+  text-align: center;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+}
+#home {
+  background-color: #343a40;
+  height: 100vh;
+}
+#about {
+  background-color: #74c69d;
+  height: 100vh;
+}
+#services {
+  background-color: #2f3e46;
+  height: 100vh;
+}
+#contact {
+  background-color: #757bc8;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  background-color: #52b788;
+  color: #1a2924;
+}
+.nav-tab {
+  display: flex;
+  list-style: none;
+  padding: 0 200px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-brand{
+  font-size: 1.3em;
+  font-weight: bold;
+  font-style: italic;
+  
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #1a2924;
+  padding: 10px 30px;
+  display: inline-block;
+  border: 2px solid rgba(0, 0, 0, 0);
+  font-size: 1.3em;
+}
+.nav-item a:hover {
+  border-bottom-color: #d8f3dc;
+}
+.menu {
+  align-self: flex-end;
+  padding-right: 20px;
+  position: relative;
+  display: none;
+  min-height: 35px;
+}
+.menu span{
+  transition: all 1s;
+}
+.menu span:nth-child(1) {
+  width: 35px;
+  height: 4px;
+  background-color: #2f3e46;
+  position: absolute;
+  top: 10px;
+  transform-origin: top left;
+}
+.menu span:nth-child(2) {
+  width: 35px;
+  height: 4px;
+  background-color: #2f3e46;
+  position: absolute;
+  top: 18px;
+  transition: 0.3s all;
+}
+.menu span:nth-child(3) {
+  width: 35px;
+  height: 4px;
+  background-color: #2f3e46;
+  position: absolute;
+  top: 26px;
+}
+.open span:nth-child(1) {
+  transform: rotate(45deg) translate(2px, -7px);
+}
+.open span:nth-child(2) {
+  width: 0px;
+}
+.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+@media (max-width: 845px) {
+  .header{
+    padding: 50px;
+  }
+  .menu {
+    display: block;
+  }
+  .nav-tab {
+    flex-flow: column;
+    padding: 10px 30px;
+    align-items: center;
+    position: relative;
+  }
+  .container {
+    background-color: #52b788;
+  }
+  .nav-item {
+    width: 100%;
+    justify-content: center;
+    display: none;
+  }
+  .show{
+    display: flex;
+  }
+  .nav-item a {
+    padding: 3px 0;
+    width: 100px;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
